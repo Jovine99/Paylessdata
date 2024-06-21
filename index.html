@@ -20,12 +20,12 @@
     <div class="container">
       <div class="sidebar">
         <ul>
-          <li><a href="#" onclick="showSection('airtime-section')">Airtime</a></li>
-          <li><a href="#" onclick="showSection('mobile-data-section')">Mobile Data</a></li>
+          <li><a href="#" onclick="showSection('airtime-section')">Buy Airtime</a></li>
+          <li><a href="#" onclick="showSection('mobile-data-section')">Buy Mobile Data</a></li>
           <li><a href="#" onclick="showSection('transaction-results-section')">Transaction Results</a></li>
         </ul>
       </div>
-
+      <button id="closeDashboardBtn" class="close-button">Close</button>
       <div class="content">
         <div id="airtime-section" class="section hidden">
           <h2>Airtime Purchase</h2>
@@ -34,7 +34,7 @@
           <label for="airtime-amount">Amount:</label>
           <select id="airtime-amount">
             <option value="10">10</option>
-            <option value="20">20</option>
+            <!-- <option value="20">20</option> -->
             <option value="50">50</option>
             <option value="100">100</option>
             <option value="custom">Custom Amount</option>
