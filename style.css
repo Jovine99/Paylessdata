@@ -198,7 +198,7 @@ button:hover {
 /* Media queries for responsiveness */
 @media (min-width: 768px) {
   .hero-section {
-    height: 70vh;
+    height: 50vh;
     padding-top: 60px;
   }
   input[type="text"],
