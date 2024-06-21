@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telecom Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="logo-section">
+    <img src="./PL-Logo.png">
+  </div>
+  <div class="hero-section">
+    <h1>PAYLESS CAMPAIGN AIRTIME</h1>
+  </div>
+  
+  <button id="openDashboardBtn" class="open-button">SAMBAZA AIRTIME</button>
+
+  <div id="dashboard" class="wrapper">
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="#" onclick="showSection('airtime-section')">Airtime</a></li>
+          <li><a href="#" onclick="showSection('mobile-data-section')">Mobile Data</a></li>
+          <li><a href="#" onclick="showSection('transaction-results-section')">Transaction Results</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div id="airtime-section" class="section hidden">
+          <h2>Airtime Purchase</h2>
+          <label for="airtime-number">Phone Number:</label>
+          <input type="text" id="data-number" placeholder="+254 7XX XXX XXX" maxlength="13" oninput="validatePhoneNumber(this)">
+          <label for="airtime-amount">Amount:</label>
+          <select id="airtime-amount">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="custom">Custom Amount</option>
+          </select>
+          <input type="text" id="custom-amount" placeholder="Enter custom amount" style="display: none;">
+          <button onclick="purchaseAirtime()">Purchase Airtime</button>
+        </div>
+
+        <div id="mobile-data-section" class="section hidden">
+          <h2>Mobile Data Purchase</h2>
+          <label for="airtime-number">Phone Number:</label>
+          <input type="text" id="data-number" placeholder="+254 7XX XXX XXX" maxlength="13" oninput="validatePhoneNumber(this)">
+          <label for="data-quantity">Quantity:</label>
+          <select id="data-quantity">
+            <option value="1GB">1GB</option>
+            <option value="5GB">5GB</option>
+            <option value="10GB">10GB</option>
+            <option value="custom">Custom Quantity</option>
+          </select>
+          <input type="text" id="custom-quantity" placeholder="Enter custom quantity" style="display: none;">
+          <button onclick="purchaseData()">Purchase Data</button>
+        </div>
+
+        <div id="transaction-results-section" class="section hidden">
+          <h2>Transaction Results</h2>
+          <div id="transaction-results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
